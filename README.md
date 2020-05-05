@@ -1,6 +1,8 @@
 # quarkus-rest-client-demo project
-This has been written to demonstrate an error observed when using the RestClient.
+This has been written to demonstrate an error observed when using the RestClient.  
+
 curl localhost:8080/hello
+When the mandrill key is invalid, the MailService doesnt return the error response in the function call location
 
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
