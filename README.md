@@ -1,4 +1,7 @@
 # quarkus-rest-client-demo project
+This has been written to demonstrate an error observed when using the RestClient.
+curl localhost:8080/hello
+
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
