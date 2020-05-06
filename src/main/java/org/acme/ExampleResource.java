@@ -23,8 +23,14 @@ public class ExampleResource {
         System.out.print("In the API");
         JsonObject key = Json.createObjectBuilder().add("key", "ABCD").build();
         System.out.println("The json built is "+key);
-        JsonObject response = mailService.ping(key);
-        System.out.println("The response is " + response);
+        try{
+           JsonObject response = mailService.ping(key);
+           System.out.println("The response is " + response);
+        }catch (WebApplicationException e) {
+            System.out.println(
+                e.getResponse().getStatus() + " and info " + e.getResponse().getStatusInfo()
+                        + e.getResponse().readEntity(JsonObject.class));
+        }
         return "hello";
     }
 }
